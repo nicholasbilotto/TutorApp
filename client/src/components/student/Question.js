@@ -47,7 +47,7 @@ onSubmit = formValues => {
   type="radio"
   id={`${questionNumber}-${i}`}
   name={`${questionNumber}-answer`}
-  value={choice}
+  value={choice} 
 />
                   <label htmlFor={`${questionNumber}-${i}`}>{choice.trim()}</label>
                 </Form.Field>
@@ -82,6 +82,8 @@ onSubmit = formValues => {
     );
   }
 }
+
+//i love you
 
 const mapStateToProps = (state, ownProps) => ({
   initialValues: {
