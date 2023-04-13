@@ -1,0 +1,125 @@
+{
+  "students": [
+    {
+      "title": "Avery",
+      "id": 1
+    },
+    {
+      "title": "Ben",
+      "id": 2
+    }
+  ],
+  "subjects": [
+    {
+      "title": "Reading",
+      "id": 2
+    },
+    {
+      "title": "Science",
+      "id": 3
+    },
+    {
+      "title": "Math",
+      "id": 4
+    }
+  ],
+  "categories": [
+    {
+      "status": "inactive",
+      "completed": true,
+      "title": "Avery Math",
+      "students": [
+        "Avery"
+      ],
+      "subject": "Math",
+      "id": 1,
+      "active": "inactive"
+    },
+    {
+      "title": "Ben Math",
+      "students": [
+        "Ben"
+      ],
+      "subject": "Math",
+      "id": 2,
+      "status": "inactive",
+      "completed": true
+    }
+  ],
+  "questions": [
+    {
+      "qtype": "mc",
+      "title": "5+5",
+      "multipleChoiceInput": "4, 5, 6, 7",
+      "Category": [
+        "Avery Math"
+      ],
+      "subject": "Math",
+      "id": 1
+    },
+    {
+      "qtype": "oe",
+      "title": "1+1",
+      "Category": [
+        "Avery Math"
+      ],
+      "subject": "Math",
+      "id": 2
+    },
+    {
+      "qtype": "mc",
+      "title": "Happy?",
+      "multipleChoiceInput": "yes, no",
+      "Category": [
+        "Avery Math"
+      ],
+      "subject": "Math",
+      "id": 3
+    },
+    {
+      "qtype": "mc",
+      "title": "Is this a test question",
+      "multipleChoiceInput": "yes, no ",
+      "Category": [
+        "Ben Math"
+      ],
+      "subject": "Math",
+      "id": 4
+    },
+    {
+      "qtype": "mc",
+      "title": "Look at this ",
+      "multipleChoiceInput": "a, b, c, d ",
+      "image": "data:image/png;base64,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",
+      "Category": [
+        "Ben Math"
+      ],
+      "subject": "Math",
+      "id": 5
+    }
+  ],
+  "answers": [
+    {
+      "category": "Ben Math",
+      "questionTitle": "Is this a test question",
+      "id": 1
+    },
+    {
+      "category": "Ben Math",
+      "questionTitle": "Is this a test question",
+      "id": 2
+    },
+    {
+      "category": "Ben Math",
+      "1-answer": "yes",
+      "questionTitle": "Is this a test question",
+      "id": 3
+    },
+    {
+      "category": "Ben Math",
+      "2-answer": " d ",
+      "questionTitle": "Look at this ",
+      "id": 4
+    }
+  ]
+}

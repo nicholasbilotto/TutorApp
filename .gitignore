@@ -1,0 +1,8 @@
+
+# Node modules
+node_modules/
+
+# React build output
+/client/build
+
+# API sensitive files (if any)
