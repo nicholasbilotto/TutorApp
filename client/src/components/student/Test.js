@@ -31,9 +31,13 @@ class Test extends React.Component {
         category => category.id === parseInt(this.props.match.params.testid)
       );
 
+    console.log(tid.title)
+
     const testName = tid.title;
 
+    console.log("testName:", testName);
     const test = questions.filter(question => {
+        console.log("question.Category:", question.Category);
         return question.Category.includes(testName);
       });
 
