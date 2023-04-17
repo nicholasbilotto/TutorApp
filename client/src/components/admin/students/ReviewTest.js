@@ -43,8 +43,8 @@ renderQuestionsAndAnswers() {
         <h4>
           Question {index + 1}: {question.title}
         </h4>
-        {question.imageUrl && (
-          <Image src={question.imageUrl} alt={`Question ${index + 1}`} centered size="medium" />
+        {question.image && (
+          <Image src={question.image} alt={`Question ${index + 1}`} centered size="medium" />
         )}
         <p>Answer: {answer ? answer[`${index + 1}-answer`] : 'N/A'}</p>
         <br></br>
