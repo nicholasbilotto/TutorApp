@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Image } from 'semantic-ui-react';
 import {
   fetchStudent,
   fetchCategories,
@@ -25,7 +26,7 @@ class ReviewTest extends React.Component {
   }
 
 renderQuestionsAndAnswers() {
-	console.log(this.props.questions);
+  console.log(this.props.questions);
 
   const testQuestions = this.props.questions.filter(
     (question) => question.Category[0] === this.renderTest(),
@@ -38,14 +39,16 @@ renderQuestionsAndAnswers() {
 
     return (
       <div key={index}>
-      	<br></br>
+        <br></br>
         <h4>
           Question {index + 1}: {question.title}
         </h4>
+        {question.imageUrl && (
+          <Image src={question.imageUrl} alt={`Question ${index + 1}`} centered size="medium" />
+        )}
         <p>Answer: {answer ? answer[`${index + 1}-answer`] : 'N/A'}</p>
         <br></br>
       </div>
-
     );
   });
 }
