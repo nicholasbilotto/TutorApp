@@ -136,7 +136,14 @@ renderImage = ({ input, label }) => {
   );
 };
 
-  onSubmit = (formValues) => {
+  onSubmit = async (formValues) => {
+    // Convert the image to a Blob if it exists
+    if (formValues.image) {
+      const response = await fetch(formValues.image);
+      const blob = await response.blob();
+      formValues.image = new File([blob], 'image.png', { type: 'image/png' });
+    }
+
     this.props.onSubmit(formValues);
     this.setState({ hidden: false });
     this.props.dispatch(reset('Form'));

@@ -22,7 +22,7 @@ onSubmit = formValues => {
 };
    render() {
     const { index, question, handleSubmit } = this.props;
-    const { title, qtype, multipleChoiceInput, image } = question;
+    const { title, qtype, multipleChoiceInput, imageUrl } = question; // Assuming the imageUrl is stored in the question object
     const questionNumber = index + 1;
     const questionType = qtype === 'mc' ? 'multiple-choice' : 'open-ended';
 
@@ -33,8 +33,8 @@ onSubmit = formValues => {
             Question {questionNumber}: {title}
           </Header>
 
-          {image && (
-            <Image src={image} alt={`Question ${questionNumber}`} centered size="medium" />
+          {imageUrl && (
+            <Image src={imageUrl} alt={`Question ${questionNumber}`} centered size="medium" />
           )}
 
           {questionType === 'multiple-choice' && (
