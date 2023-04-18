@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Field, reduxForm, reset, initialize } from 'redux-form';
-import { fetchCategories, createQuestion } from '../../../actions'; 
+import { fetchCategories } from '../../../actions'; 
 
 
 class QuestionForm extends React.Component {
@@ -136,10 +136,10 @@ renderImage = ({ input, label }) => {
   );
 };
 
-onSubmit = (formValues) => {
+onSubmit = formValues => {
   console.log('Form values before submitting:', formValues);
 
-  this.props.createQuestion(formValues, this.props.subject);
+  this.props.onSubmit(formValues);
   this.setState({ "hidden": false })
   this.props.dispatch(reset('Form'));
 
@@ -218,7 +218,7 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { fetchCategories, createQuestion })(reduxForm({
+export default connect(mapStateToProps, { fetchCategories })(reduxForm({
   form: 'Form',
   validate, 
 })(QuestionForm))
