@@ -7,7 +7,7 @@ import QuestionForm from './QuestionForm';
 class NewQuestion extends React.Component {
 
   onSubmit = (formValues) => {
-    this.props.createQuestion(formValues), this.props.title)
+    this.props.createQuestion(formValues), this.props.title);
     return(
       <div></div>
       )
