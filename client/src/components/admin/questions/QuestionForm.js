@@ -140,6 +140,9 @@ onSubmit = async (formValues) => {
   console.log('Form values before submitting:', formValues);
 
   this.props.createQuestion(formValues, this.props.subject);
+  this.setState("hidden": false)
+  this.props.dispatch(reset('Form'));
+
 };
 
   render() {
