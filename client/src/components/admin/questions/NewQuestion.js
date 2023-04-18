@@ -4,16 +4,19 @@ import { createQuestion } from '../../../actions';
 import QuestionForm from './QuestionForm';
 
 class NewQuestion extends React.Component {
-  onSubmit = async (formValues) => {
-    const formData = new FormData();
 
-    // Append formValues to formData
-    for (const key in formValues) {
-      formData.append(key, formValues[key]);
-    }
+onSubmit = async (formValues) => {
+  console.log('Form values before submitting:', formValues);
 
-    this.props.createQuestion(formData, this.props.title);
-  };
+  const formData = new FormData();
+
+  // Append formValues to formData
+  for (const key in formValues) {
+    formData.append(key, formValues[key]);
+  }
+
+  this.props.onSubmit(formData, this.props.title);
+};
 
   render() {
     return (
