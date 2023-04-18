@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Field, reduxForm, reset, initialize } from 'redux-form';
-import { fetchCategories } from '../../../actions'; 
+import { fetchCategories, createQuestion } from '../../../actions'; 
 
 
 class QuestionForm extends React.Component {
