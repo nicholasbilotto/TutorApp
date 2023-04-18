@@ -146,7 +146,7 @@ onSubmit = async (formValues) => {
     formData.append(key, formValues[key]);
   }
 
-  this.props.createQuestion(formData, this.props.title);
+  this.props.createQuestion(formData, this.props.subject);
 };
 
   render() {
