@@ -44,7 +44,7 @@ async getQuestions() {
   console.log("testName:", testName);
   const test = questions.filter((question) => {
     console.log("question.Category:", question.Category);
-    return question.Category.includes(testName);
+    return question.Category && question.Category.includes(testName);
   });
 
   this.setState({ currentTest: test });
