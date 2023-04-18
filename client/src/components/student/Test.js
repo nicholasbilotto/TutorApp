@@ -14,35 +14,41 @@ class Test extends React.Component {
       };
   }
 
-  async componentDidMount() {
-    await this.props.fetchQuestions();
-    await this.props.fetchCategories();
+async componentDidMount() {
+  try {
+    await Promise.all([
+      this.props.fetchQuestions(),
+      this.props.fetchCategories(),
+    ]);
     await this.getQuestions();
-  } 
+  } catch (error) {
+    console.error("Error fetching questions and categories:", error);
+  }
+}
 
   onSubmitAnswer = () => {
     this.handleNextQuestion();
   };
 
-   async getQuestions() {
-    const { questions, categories } = this.props;
+async getQuestions() {
+  const { questions, categories } = this.props;
 
-    const tid = categories.find(
-        category => category.id === parseInt(this.props.match.params.testid)
-      );
+  const tid = categories.find(
+    (category) => category.id === parseInt(this.props.match.params.testid),
+  );
 
-    console.log(tid.title)
+  console.log(tid.title);
 
-    const testName = tid.title;
+  const testName = tid.title;
 
-    console.log("testName:", testName);
-    const test = questions.filter(question => {
-        console.log("question.Category:", question.Category);
-        return question.Category.includes(testName);
-      });
+  console.log("testName:", testName);
+  const test = questions.filter((question) => {
+    console.log("question.Category:", question.Category);
+    return question.Category.includes(testName);
+  });
 
-    this.setState({ currentTest: test});
-  }
+  this.setState({ currentTest: test });
+}
 
   handleNextQuestion = () => {
     const { currentTest, currentQuestionIndex } = this.state;
