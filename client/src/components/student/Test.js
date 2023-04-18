@@ -86,6 +86,7 @@ handleSubmitTest = (formValues) => {
     );
     const testName = tid.title;
 
+    console.log(currentTest[currentQuestionIndex].image)
 
     return (
       <Container>
@@ -96,7 +97,6 @@ handleSubmitTest = (formValues) => {
           isLastQuestion={isLastQuestion}
           handleSubmitTest={this.handleSubmitTest}
           category={testName}
-          image={currentTest[currentQuestionIndex].image}
         />
       </Container>
     );
