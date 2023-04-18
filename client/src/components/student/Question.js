@@ -21,7 +21,6 @@ onSubmit = formValues => {
   }
 };
    render() {
-    console.log(this.props.question)
     const { index, question, handleSubmit } = this.props;
     const { title, qtype, multipleChoiceInput, image } = question; // Assuming the imageUrl is stored in the question object
     const questionNumber = index + 1;
