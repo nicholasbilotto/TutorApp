@@ -137,21 +137,16 @@ renderImage = ({ input, label }) => {
 };
 
 onSubmit = async (formValues) => {
-  // Convert the image to a Blob if it exists
-  if (formValues.image) {
-    const response = await fetch(formValues.image);
-    const blob = await response.blob();
-    formValues.image = new File([blob], 'image.png', { type: 'image/png' });
+  console.log('Form values before submitting:', formValues);
+
+  const formData = new FormData();
+
+  // Append formValues to formData
+  for (const key in formValues) {
+    formData.append(key, formValues[key]);
   }
 
-  // Stringify the Category array before submitting
-  if (formValues.Category) {
-    formValues.Category = JSON.stringify(formValues.Category);
-  }
-
-  this.props.onSubmit(formValues);
-  this.setState({ hidden: false });
-  this.props.dispatch(reset('Form'));
+  this.props.createQuestion(formData, this.props.title);
 };
 
   render() {
