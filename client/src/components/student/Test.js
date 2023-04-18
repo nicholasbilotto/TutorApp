@@ -42,6 +42,7 @@ async getQuestions() {
   const testName = tid.title;
 
   console.log("testName:", testName);
+  console.log("questions", questions);
   const test = questions.filter((question) => {
     console.log("question.Category:", question.Category);
     return question.Category && question.Category.includes(testName);
