@@ -37,14 +37,10 @@ async getQuestions() {
     (category) => category.id === parseInt(this.props.match.params.testid),
   );
 
-  console.log(tid.title);
 
   const testName = tid.title;
 
-  console.log("testName:", testName);
-  console.log("questions", questions);
   const test = questions.filter((question) => {
-    console.log("question.Category:", question.Category);
     return question.Category && question.Category.includes(testName);
   });
 
@@ -90,6 +86,7 @@ handleSubmitTest = (formValues) => {
     );
     const testName = tid.title;
 
+
     return (
       <Container>
         <Question
@@ -99,6 +96,7 @@ handleSubmitTest = (formValues) => {
           isLastQuestion={isLastQuestion}
           handleSubmitTest={this.handleSubmitTest}
           category={testName}
+          image={currentTest[currentQuestionIndex].image}
         />
       </Container>
     );
