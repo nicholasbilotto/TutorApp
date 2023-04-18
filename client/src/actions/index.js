@@ -188,6 +188,7 @@ export const deleteSubject = id => async dispatch => {
 
 
 export const createQuestion = (formValues, subject) => async (dispatch, getState) => {
+  console.log('Form values in action creator:', formValues);
   const response = await questions.post('/questions', { ...formValues, subject });
 
   dispatch({ type: CREATE_QUESTION, payload: response.data });
