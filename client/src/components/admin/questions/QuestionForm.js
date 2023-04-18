@@ -215,7 +215,7 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { fetchCategories })(reduxForm({
+export default connect(mapStateToProps, { fetchCategories, createQuestion })(reduxForm({
   form: 'Form',
   validate, 
 })(QuestionForm))
