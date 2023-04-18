@@ -139,14 +139,7 @@ renderImage = ({ input, label }) => {
 onSubmit = async (formValues) => {
   console.log('Form values before submitting:', formValues);
 
-  const formData = new FormData();
-
-  // Append formValues to formData
-  for (const key in formValues) {
-    formData.append(key, formValues[key]);
-  }
-
-  this.props.createQuestion(formData, this.props.subject);
+  this.props.createQuestion(formValues, this.props.subject);
 };
 
   render() {
