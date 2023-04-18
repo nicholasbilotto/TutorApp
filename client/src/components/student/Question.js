@@ -23,6 +23,7 @@ onSubmit = formValues => {
    render() {
     const { index, question, handleSubmit } = this.props;
     const { title, qtype, multipleChoiceInput, image } = question; // Assuming the imageUrl is stored in the question object
+     console.log("Image URL:", image);
     const questionNumber = index + 1;
     const questionType = qtype === 'mc' ? 'multiple-choice' : 'open-ended';
 
