@@ -136,7 +136,7 @@ renderImage = ({ input, label }) => {
   );
 };
 
-onSubmit = async (formValues) => {
+onSubmit = (formValues) => {
   console.log('Form values before submitting:', formValues);
 
   this.props.createQuestion(formValues, this.props.subject);
