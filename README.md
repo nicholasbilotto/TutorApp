@@ -16,23 +16,44 @@
 ## Screenshots
 Below are some screenshots demonstrating the key functionalities of the app:
 
-1. **Student Login**
-   ![Student Login](path-to-image)
+1. **Login (student)**
+   ![Student Login](/screenshots/student-login.png)
 
-2. **Student Home Screen**
-   ![Student Home Screen](path-to-image)
+2. **Home Screen (student)**
+   ![Student Home Screen](/screenshots/Student-Homescreen.png)
 
 3. **Student Taking Test - Question One**
-   ![Student Taking Test](path-to-image)
+   ![Student Taking Test](/screenshots/Student-Question.png)
 
 4. **Tutor Home Screen**
-   ![Tutor Home Screen](path-to-image)
+   ![Tutor Home Screen](/screenshots/Admin-Homescreen.png)
 
 5. **Tutor Subject List Page**
-   ![Tutor Subject List](path-to-image)
+   ![Tutor Subject List](/screenshots/Admin-SubjectView.png)
 
-6. **Admin Side Edit Subject Page**
-   ![Admin Edit Subject](path-to-image)
+6. **Tutor Edit Subject Page**
+   ![Admin Edit Subject](/screenshots/s.png)
 
-7. **Admin Side Student Test Page**
-   ![Admin Student Test](path-to-image)
+7. **Tutor Student Test Page**
+   ![Admin Student Test](/screenshots/student-login.png)
+
+
+Admin-Homescreen.png
+Add files via upload
+now
+Admin-StudentView.png
+Add files via upload
+now
+Admin-SubjectView.png
+Add files via upload
+now
+Editing-Math.png
+Add files via upload
+now
+Student-Homescreen.png
+Add files via upload
+now
+Student-Question.png
+Add files via upload
+now
+student-login.png
